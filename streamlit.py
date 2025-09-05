@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_BASE = "http://localhost:8080/api"  # FastAPI backend base URL
+API_BASE = "https://3ca0a3e92209.ngrok-free.app/api"  # FastAPI backend base URL
 
 st.set_page_config(page_title="PDF RAG Assistant", page_icon="📚", layout="wide")
 
@@ -75,3 +75,4 @@ elif page == "💬 Chat with PDFs":
         st.session_state.messages.append({"role": "assistant", "content": answer})
         with st.chat_message("assistant"):
             st.markdown(answer)
+
